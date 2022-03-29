@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20893D7527C1480A0047AEF6 /* BlutoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20893D7427C1480A0047AEF6 /* BlutoothManager.swift */; };
+		20893D7827C19E5D0047AEF6 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20893D7727C19E5D0047AEF6 /* Device.swift */; };
+		20893D7A27C19E710047AEF6 /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20893D7927C19E710047AEF6 /* Devices.swift */; };
 		20BF263B27B1436700DBB886 /* TessRemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF263A27B1436700DBB886 /* TessRemoteApp.swift */; };
 		20BF263F27B1436900DBB886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BF263E27B1436900DBB886 /* Assets.xcassets */; };
 		20BF264227B1436900DBB886 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BF264127B1436900DBB886 /* Preview Assets.xcassets */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20893D7427C1480A0047AEF6 /* BlutoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlutoothManager.swift; sourceTree = "<group>"; };
+		20893D7727C19E5D0047AEF6 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		20893D7927C19E710047AEF6 /* Devices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
 		20BF263727B1436700DBB886 /* TessRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TessRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BF263A27B1436700DBB886 /* TessRemoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TessRemoteApp.swift; sourceTree = "<group>"; };
 		20BF263E27B1436900DBB886 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +85,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20893D7327C147DF0047AEF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				20BF266727B143A400DBB886 /* AdvanceControlView.swift */,
+				20BF266427B143A400DBB886 /* DeviceView.swift */,
+				20BF266527B143A400DBB886 /* MapView.swift */,
+				20BF266627B143A400DBB886 /* MenuView.swift */,
+				20BF266827B143A400DBB886 /* SimpleControl.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		20893D7627C19E420047AEF6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20893D7427C1480A0047AEF6 /* BlutoothManager.swift */,
+				20893D7727C19E5D0047AEF6 /* Device.swift */,
+				20893D7927C19E710047AEF6 /* Devices.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		20BF262E27B1436700DBB886 = {
 			isa = PBXGroup;
 			children = (
@@ -102,12 +130,9 @@
 		20BF263927B1436700DBB886 /* TessRemote */ = {
 			isa = PBXGroup;
 			children = (
-				20BF266727B143A400DBB886 /* AdvanceControlView.swift */,
-				20BF266427B143A400DBB886 /* DeviceView.swift */,
-				20BF266527B143A400DBB886 /* MapView.swift */,
-				20BF266627B143A400DBB886 /* MenuView.swift */,
-				20BF266827B143A400DBB886 /* SimpleControl.swift */,
 				20BF263A27B1436700DBB886 /* TessRemoteApp.swift */,
+				20893D7327C147DF0047AEF6 /* View */,
+				20893D7627C19E420047AEF6 /* Models */,
 				20BF263E27B1436900DBB886 /* Assets.xcassets */,
 				20BF264027B1436900DBB886 /* Preview Content */,
 			);
@@ -270,11 +295,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				20BF266B27B143A400DBB886 /* MenuView.swift in Sources */,
+				20893D7527C1480A0047AEF6 /* BlutoothManager.swift in Sources */,
+				20893D7A27C19E710047AEF6 /* Devices.swift in Sources */,
 				20BF266C27B143A400DBB886 /* AdvanceControlView.swift in Sources */,
 				20BF266D27B143A400DBB886 /* SimpleControl.swift in Sources */,
 				20BF266A27B143A400DBB886 /* MapView.swift in Sources */,
 				20BF263B27B1436700DBB886 /* TessRemoteApp.swift in Sources */,
 				20BF266927B143A400DBB886 /* DeviceView.swift in Sources */,
+				20893D7827C19E5D0047AEF6 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +466,8 @@
 				DEVELOPMENT_TEAM = GCF88GRA99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app need acces to Bluetooth.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "This app needs to communicate with bluetooth peropherals.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -467,6 +497,8 @@
 				DEVELOPMENT_TEAM = GCF88GRA99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app need acces to Bluetooth.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "This app needs to communicate with bluetooth peropherals.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

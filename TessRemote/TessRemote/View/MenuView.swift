@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import CoreBluetooth
+
+//var centralManager: CBCentralManager!
 
 struct GrowingButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
@@ -23,7 +26,9 @@ struct GrowingButton: ButtonStyle {
 
 struct MenuView: View {
     private let buttonPadding = 20.0
+    
     var body: some View {
+        
         TabView{
             DeviceView()
                 .tabItem{
